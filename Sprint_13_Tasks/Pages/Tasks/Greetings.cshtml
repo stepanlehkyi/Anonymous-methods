@@ -1,0 +1,52 @@
+﻿@page
+@model Sprint_13_Tasks.Pages.Tasks.GreetingsModel
+@{
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+
+    <h1>Greetings</h1>
+    <p>The value of myMessage is: @ViewData["Message"]</p>
+
+    <p>The greeting is: @ViewData["Greeting"]</p> 
+
+    <p>Here in Ukraine: @DateTime.Now.DayOfWeek</p>
+
+    <p>We wish you:  </p>
+
+    <p>Today is @DateTime.Now.DayOfWeek</p>
+
+    <table style=" border: 1px solid black; ">
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Day</td>
+            <td>@DateTime.Now.Day</td>
+        </tr>
+        <tr>
+            <td>Hour</td>
+            <td>@DateTime.Now.Hour</td>
+        </tr>
+        <tr>
+            <td>Minute</td>
+            <td>@DateTime.Now.Minute</td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td>@DateTime.Now.Second</td>
+        </tr>
+      
+
+    </table>
+
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+﻿@page
+@model Pages.Tasks.ProductInfoModel
+@{ 
+    ViewData["Title"] = "ProductInfo - ViewTask";
+    List<Sprint_13_Tasks.Model.Product> products = new List<Model.Product>() 
+    {
+        new Sprint_13_Tasks.Model.Product() { Name = "Bread", Price = 10 },
+        new Model.Product() { Name = "Milk", Price = 11 },
+        new Model.Product(){Name = "Cheese",Price = 140},
+        new Model.Product(){Name = "Sausage",Price = 110},
+        new Model.Product(){Name = "Potato",Price = 7},
+        new Model.Product(){Name = "Banana",Price = 23},
+        new Model.Product(){Name = "Tomato",Price = 25},
+        new Model.Product(){Name="Candy",Price =75}
+    
+    };
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <h1>Information about product</h1>
+    <table style="">
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+      @foreach (var product in products)
+      {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+            </tr>
+      }
+    </table>
+
+</body>
+</html>
+
+
